@@ -208,7 +208,6 @@ fi
 if test "${IBMCLOUD_API_KEY}" = ""
 then
    #export IBMCLOUD_API_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-   #export IBMCLOUD_API_KEY="0ocncDFqQF4dLJwiBaAtyIDgJvlsU7cLpCwgGvyiQnR7"   # itz-cp-emea
 else
 fi
 
@@ -220,7 +219,7 @@ fi
 if test "${IBMCLOUD_ACCOUNT_ID}" = ""
 then
    #export IBMCLOUD_ACCOUNT_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-   #export IBMCLOUD_ACCOUNT_ID="ad09f476263c44cda2cdc697bd808a6f"   # itz-cp-emea
+   #export NEW_IBMCLOUD_ACCOUNT_ID="ad09f476263c44cda2cdc697bd808a6f"   # itz-cp-emea
 else
 fi
 
