@@ -354,7 +354,10 @@ echo | tee -a \${LOG}
 
 cd /tmp
 echo "Download BLAST" | tee -a \${LOG}
-curl -LO https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.15.0+-x64-linux.tar.gz >> \${LOG} 2>&1
+# Get latest version first
+LATEST=\`curl -L https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST | egrep x64-linux 2>/dev/null | egrep -v md5 | awk 'BEGIN{FS="\""}{print \$2}'\`
+
+curl -LO https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/\${LATEST} >> \${LOG} 2>&1
 echo "Installing BLAST" | tee -a \${LOG}
 tar xvzf ncbi-blast-*-x64-linux.tar.gz >> \${LOG} 2>&1
 if test "\${SHARED}" = ""
