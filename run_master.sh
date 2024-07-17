@@ -84,12 +84,12 @@ ID_RSA_PUB_BASE64="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ID_RSA_PRIV_BASE64="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 mkdir -p /root/.ssh
-if test "${ID_RSA_PRIV_BASE64}" != ""
+if test "${ID_RSA_PRIV_BASE64}" != "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 then
    echo "${ID_RSA_PRIV_BASE64}" | base64 -d > /root/.ssh/id_rsa
    chmod 600 /root/.ssh/id_rsa
 fi
-if test "${ID_RSA_PUB_BASE64}" != ""
+if test "${ID_RSA_PUB_BASE64}" != "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 then
    echo "${ID_RSA_PUB_BASE64}" | base64 -d > /root/.ssh/id_rsa.pub
    chmod 644 /root/.ssh/id_rsa.pub
