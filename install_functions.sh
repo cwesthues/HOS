@@ -340,16 +340,29 @@ write_blast () {
 . /var/environment.sh
 
 HOSTNAME=\`hostname\`
-echo "Executing \$0 on \${HOSTNAME}" | tee -a \${LOG}
+echo "Executing \$0 on \${HOSTNAME}"
 NAME=\`basename \$0 | sed s/".sh"//g\`
 LOG="/var/log/\${NAME}.log"
+
+LSF_TOP=\$1
+SHARED=\$2
+
+echo | tee -a \${LOG}
+echo "Argument 1 SHARED: \${SHARED}" | tee -a \${LOG}
+echo | tee -a \${LOG}
+
 
 cd /tmp
 echo "Download BLAST" | tee -a \${LOG}
 curl -LO https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.15.0+-x64-linux.tar.gz >> \${LOG} 2>&1
 echo "Installing BLAST" | tee -a \${LOG}
 tar xvzf ncbi-blast-*-x64-linux.tar.gz >> \${LOG} 2>&1
-cp ncbi-blast-*/bin/* /usr/bin
+if test "\${SHARED}" = ""
+then
+   cp ncbi-blast-*/bin/* /usr/bin
+else
+   mv ncbi-blast-* \${SHARED}
+fi
 case \${ID_LIKE} in
 *rhel*|*fedora*)
    yum -y --nogpgcheck install perl-JSON-PP perl-core >> \${LOG} 2>&1

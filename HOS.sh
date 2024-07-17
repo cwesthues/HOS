@@ -109,7 +109,7 @@ RET=`echo " ${ADD_ONS} " | fgrep ' BLAST '`
 if test "${RET}" != ""
 then
    write_blast
-   /tmp/blast.sh
+   /tmp/blast.sh ${SHARED}
    write_blast_howto
    /tmp/blast_howto.sh
 fi
