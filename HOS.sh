@@ -36,7 +36,9 @@ esac
 
 ############################################################
 
-ALL_ADD_ONS="Apptainer Aspera BLAST Blender DataManager easyEDA Explorer Geekbench Intel-HPCKit iRODS-shell Jupyter LS-DYNA LWS MatlabRuntime Multicluster Nextflow Octave OpenFOAM openMPI PlatformMPI ProcessManager R rDock RTM Sanger-in-a-box Simulator ScaleClient Spark Streamflow stress-ng Tensorflow Toil VeloxChem Yellowdog"
+ALL_ADD_ONS="Apptainer Aspera BLAST Sanger-in-a-box"
+
+#BLAST Blender DataManager easyEDA Explorer Geekbench Intel-HPCKit iRODS-shell Jupyter LS-DYNA LWS MatlabRuntime Multicluster Nextflow Octave OpenFOAM openMPI PlatformMPI ProcessManager R rDock RTM Simulator ScaleClient Spark Streamflow stress-ng Tensorflow Toil VeloxChem Yellowdog"
 
 echo ${ESC} ""
 echo ${ESC} "${BLUE}Select Add-On's${OFF}"
@@ -101,6 +103,17 @@ then
    /tmp/aspera_howto.sh
 fi
 #-----------------  Aspera ----------------
+
+#-----------------  BLAST -----------------
+RET=`echo " ${ADD_ONS} " | fgrep ' BLAST '`
+if test "${RET}" != ""
+then
+   write_blast
+   /tmp/blast.sh
+   write_blast_howto
+   /tmp/blast_howto.sh
+fi
+#-----------------  BLAST -----------------
 
 #------------  Sanger-in-a-box ------------
 RET=`echo " ${ADD_ONS} " | fgrep ' Sanger-in-a-box '`
