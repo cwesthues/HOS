@@ -507,7 +507,7 @@ fi
 
 if test "${INSTALL_TYPE}" = "CLOUD"
 then
-   ALL_POCS=`ls /root/PoCs`
+   ALL_POCS=`ls /root/PoCs 2>/dev/null`
    if test "${ALL_POCS}" != ""
    then
 
