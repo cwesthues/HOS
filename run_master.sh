@@ -91,9 +91,9 @@ chmod 644 /root/.ssh/id_rsa.pub
 cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
 
-#ID_RSA_PUB=`cat /root/.ssh/id_rsa.pub`
+ID_RSA_PUB=`cat /root/.ssh/id_rsa.pub`
 ID_RSA_PUB_BASE64=`cat /root/.ssh/id_rsa.pub | base64 -w0`
-#ID_RSA_PRIV=`cat /root/.ssh/id_rsa`
+ID_RSA_PRIV=`cat /root/.ssh/id_rsa`
 ID_RSA_PRIV_BASE64=`cat /root/.ssh/id_rsa | base64 -w0`
 
 ############################################################
@@ -207,9 +207,11 @@ fi
 
 if test "${IBMCLOUD_API_KEY}" = ""
 then
+   echo "Set IBMCLOUD_API_KEY"
    #export IBMCLOUD_API_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
    #export NEW_IBMCLOUD_API_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"   # itz-cp-emea
 else
+   echo "IBMCLOUD_API_KEY is already set"
 fi
 
 if test "${IBMCLOUD_RESOURCE_GROUP}" = ""
@@ -219,9 +221,11 @@ fi
 
 if test "${IBMCLOUD_ACCOUNT_ID}" = ""
 then
+   echo "Set IBMCLOUD_ACCOUNT_ID"
    #export IBMCLOUD_ACCOUNT_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
    #export NEW_IBMCLOUD_ACCOUNT_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"   # itz-cp-emea
 else
+   echo "IBMCLOUD_ACCOUNT_ID is already set"
 fi
 
 IBMCLOUD_REGIONS_TERRAFORM="eu-de eu-es eu-gb us-east us-south"
