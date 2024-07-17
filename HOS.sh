@@ -2,8 +2,17 @@
 
 ############################################################
 
+FOUND_SHARED=`cat /etc/fstab | egrep ^[0-9] | egrep -v "/mnt/lsf" | awk '{print $2}'`
+echo -n "Enter shared path (<Enter> for '${FOUND_SHARED}'): "
+read SHARED
+if test "${SHARED}" = ""
+then
+   SHARED="${SHARED}"
+fi
+
+
 cat > /var/environment.sh <<EOF
-SHARED="/shared"
+SHARED="${SHARED}"
 LSF_TOP="/opt/ibm/lsf"
 EOF
 chmod 755 /var/environment.sh
