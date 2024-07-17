@@ -2,6 +2,14 @@
 
 ############################################################
 
+cat > /var/environment.sh <<EOF
+SHARED="/shared"
+LSF_TOP="/opt/ibm/lsf"
+EOF
+chmod 755 /var/environment.sh
+
+############################################################
+
 RED='\e[1;31m'
 GREEN='\e[1;32m'
 BLUE='\e[1;34m'
@@ -10,7 +18,13 @@ OFF='\e[0;0m'
 ############################################################
 
 . /etc/os-release
-. install_functions.sh
+if test ! -f install_functions.sh
+then
+   echo "ERROR: install_functions.sh not found, exiting."
+   exit 1
+else
+   . install_functions.sh
+fi
 
 case ${ID_LIKE} in
 *rhel*|*fedora*)
@@ -60,6 +74,24 @@ ADD_ONS=`echo ${ADD_ONS} | sed s/","/" "/g`
 echo
 echo "You selected ${ADD_ONS}"
 
+#---------------  Apptainer ---------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Apptainer '`
+if test "${RET}" != ""
+then
+   write_apptainer_compute
+   /tmp/apptainer_compute.sh
+   mkdir -p ${LSF_TOP}/apptainer/images
+   apptainer build ${LSF_TOP}/apptainer/images/ubuntu.sif docker://ubuntu
+   cd ${LSF_TOP}
+   chmod -R 777  apptainer/images
+   write_apptainer_master ${LSF_TOP}
+   /tmp/apptainer_master.sh ${LSF_TOP} ${LSF_TOP}
+   write_apptainer_howto
+   /tmp/apptainer_howto.sh
+fi
+#---------------  Apptainer ---------------
+
+#------------  Sanger-in-a-box ------------
 RET=`echo " ${ADD_ONS} " | fgrep ' Sanger-in-a-box '`
 if test "${RET}" != ""
 then
@@ -68,8 +100,5 @@ then
    write_sanger_in_a_box_howto
    /tmp/sanger_in_a_box_howto.sh ${SHARED}
 fi      
+#------------  Sanger-in-a-box ------------
 
-
-
-
-done
