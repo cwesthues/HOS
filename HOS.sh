@@ -36,9 +36,9 @@ esac
 
 ############################################################
 
-ALL_ADD_ONS="Apptainer Aspera BLAST Blender Sanger-in-a-box"
+ALL_ADD_ONS="Apptainer Aspera BLAST Blender DataManager Sanger-in-a-box"
 
-#BLAST Blender DataManager easyEDA Explorer Geekbench Intel-HPCKit iRODS-shell Jupyter LS-DYNA LWS MatlabRuntime Multicluster Nextflow Octave OpenFOAM openMPI PlatformMPI ProcessManager R rDock RTM Simulator ScaleClient Spark Streamflow stress-ng Tensorflow Toil VeloxChem Yellowdog"
+# easyEDA Explorer Geekbench Intel-HPCKit iRODS-shell Jupyter LS-DYNA LWS MatlabRuntime Multicluster Nextflow Octave OpenFOAM openMPI PlatformMPI ProcessManager R rDock RTM Simulator ScaleClient Spark Streamflow stress-ng Tensorflow Toil VeloxChem Yellowdog"
 
 echo ${ESC} ""
 echo ${ESC} "${BLUE}Select Add-On's${OFF}"
@@ -127,6 +127,17 @@ then
    /tmp/blender_howto.sh ${SHARED}
 fi
 #----------------  Blender ----------------
+
+#--------------  Datamanager --------------
+RET=`echo " ${ADD_ONS} " | fgrep ' DataManager '`
+if test "${RET}" != ""
+then
+   write_datamanager_master
+   /tmp/datamanager_master.sh ${LSF_TOP}
+   write_datamanager_howto
+   /tmp/datamanager_howto.sh
+fi
+#--------------  Datamanager --------------
 
 #------------  Sanger-in-a-box ------------
 RET=`echo " ${ADD_ONS} " | fgrep ' Sanger-in-a-box '`
