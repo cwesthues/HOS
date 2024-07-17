@@ -83,11 +83,12 @@ then
    write_apptainer_compute
    /tmp/apptainer_compute.sh
    mkdir -p ${SHARED}/apptainer/images
+   rm -rf ${SHARED}/apptainer/images
    apptainer build ${SHARED}/apptainer/images/ubuntu.sif docker://ubuntu
    cd ${LSF_TOP}
    chmod -R 777  apptainer/images
    write_apptainer_master ${LSF_TOP}
-   /tmp/apptainer_master.sh ${LSF_TOP} ${LSF_TOP}
+   /tmp/apptainer_master.sh ${LSF_TOP} ${SHARED}
    write_apptainer_howto
    /tmp/apptainer_howto.sh
 fi
