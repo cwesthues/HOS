@@ -45,9 +45,7 @@ esac
 
 ############################################################
 
-ALL_ADD_ONS="Apptainer Aspera BLAST DataManager Intel-HPCKit Sanger-in-a-box"
-
-# easyEDA Explorer Geekbench Intel-HPCKit iRODS-shell Jupyter LS-DYNA LWS MatlabRuntime Multicluster Nextflow Octave OpenFOAM openMPI PlatformMPI ProcessManager R rDock RTM Simulator ScaleClient Spark Streamflow stress-ng Tensorflow Toil VeloxChem Yellowdog"
+ALL_ADD_ONS="Apptainer Aspera BLAST DataManager Intel-HPCKit iRODS-shell LS-DYNA MatlabRuntime Nextflow Octave R rDock Sanger-in-a-box Spark Streamflow stress-ng Tensorflow Toil VeloxChem"
 
 echo ${ESC} ""
 echo ${ESC} "${BLUE}Select Add-On's${OFF}"
@@ -144,6 +142,81 @@ then
 fi
 #-------------  Intel-HPCKit --------------
 
+#--------------  iRODS-shell --------------
+RET=`echo " ${ADD_ONS} " | fgrep ' iRODS-shell '`
+if test "${RET}" != ""
+then
+   write_irods
+   /tmp/irods.sh
+fi
+#--------------  iRODS-shell --------------
+
+#----------------  LS-DYNA ----------------
+RET=`echo " ${ADD_ONS} " | fgrep ' LS-DYNA '`
+if test "${RET}" != ""
+then
+   write_lsdyna_compute
+   /tmp/lsdyna_compute.sh
+fi
+#----------------  LS-DYNA ----------------
+
+#-------------  MatlabRuntime -------------
+RET=`echo " ${ADD_ONS} " | fgrep ' MatlabRuntime '`
+if test "${RET}" != ""
+then
+   write_matlab_master ${SHARED}
+   /tmp/matlab_master.sh
+   write_matlab_howto ${SHARED}
+   /tmp/matlab_howto.sh
+fi
+#-------------  MatlabRuntime -------------
+
+#---------------  Nextflow ----------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Nextflow '`
+if test "${RET}" != ""
+then
+   write_nextflow_master
+   /tmp/nextflow_master.sh ${LSF_TOP}
+   write_nextflow_howto
+   /tmp/nextflow_howto.sh ${SHARED} ${LSF_TOP}
+fi
+#---------------  Nextflow ----------------
+
+#-----------------  Octave ----------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Octave '`
+if test "${RET}" != ""
+then
+   write_octave_compute
+   /tmp/octave_compute.sh
+   write_octave_master
+   /tmp/octave_master.sh ${LSF_TOP}
+   write_octave_howto
+   /tmp/octave_howto.sh
+fi
+#-----------------  Octave ----------------
+
+#-------------------  R -------------------
+RET=`echo " ${ADD_ONS} " | fgrep ' R '`
+if test "${RET}" != ""
+then
+   write_r
+   /tmp/r.sh
+   write_r_howto
+   /tmp/r_howto.sh
+fi
+#-------------------  R -------------------
+
+#-----------------  rDock -----------------
+RET=`echo " ${ADD_ONS} " | fgrep ' rDock '`
+if test "${RET}" != ""
+then
+   write_rdock
+   /tmp/rdock.sh
+   write_rdock_howto
+   /tmp/rdock_howto.sh
+fi
+#-----------------  rDock -----------------
+
 #------------  Sanger-in-a-box ------------
 RET=`echo " ${ADD_ONS} " | fgrep ' Sanger-in-a-box '`
 if test "${RET}" != ""
@@ -155,3 +228,76 @@ then
 fi      
 #------------  Sanger-in-a-box ------------
 
+#-----------------  Spark -----------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Spark '`
+if test "${RET}" != ""
+then
+   write_spark_compute
+   /tmp/spark_compute.sh ${LSF_TOP}
+   write_spark_master
+   /tmp/spark_master.sh ${LSF_TOP} ${SHARED}
+   write_spark_howto
+   /tmp/spark_howto.sh ${SHARED}
+fi
+#-----------------  Spark -----------------
+
+#---------------  Streamflow --------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Streamflow '`
+if test "${RET}" != ""
+then
+   write_streamflow_master
+   /tmp/streamflow_master.sh ${SHARED}
+   write_streamflow_howto
+   /tmp/streamflow_howto.sh ${SHARED}
+fi
+#---------------  Streamflow --------------
+
+#---------------  stress-ng ---------------
+RET=`echo " ${ADD_ONS} " | fgrep ' stress-ng '`
+if test "${RET}" != ""
+then
+   write_stressng_compute
+   /tmp/stressng_compute.sh ${LSF_TOP}
+   write_stressng_howto
+   /tmp/stressng_howto.sh
+fi
+#---------------  stress-ng ---------------
+
+#---------------  Tensorflow ---------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Tensorflow '`
+if test "${RET}" != ""
+then
+   write_tensorflow_master
+   /tmp/tensorflow_master.sh ${LSF_TOP}
+   write_tensorflow_howto
+   /tmp/tensorflow_howto.sh
+   write_tensorflow_compute
+   /tmp/tensorflow_compute.sh
+fi
+#---------------  Tensorflow ---------------
+
+#------------------  Toil ------------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Toil '`
+if test "${RET}" != ""
+then
+      write_toil_master
+      /tmp/toil_master.sh
+       write_toil_howto
+      /tmp/toil_howto.sh ${SHARED}
+      write_toil_compute
+      /tmp/toil_compute.sh
+fi
+#------------------  Toil ------------------
+
+#----------------  VeloxChem ---------------
+RET=`echo " ${ADD_ONS} " | fgrep ' VeloxChem '`
+if test "${RET}" != ""
+then
+   write_veloxchem_compute
+   /tmp/veloxchem_compute.sh
+   write_veloxchem_master
+   /tmp/veloxchem_master.sh ${SHARED}
+    write_veloxchem_howto
+   /tmp/veloxchem_howto.sh ${SHARED}
+fi
+#----------------  VeloxChem ---------------
