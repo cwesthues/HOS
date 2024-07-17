@@ -25,7 +25,7 @@ then
    echo "ERROR: install_functions.sh not found, exiting."
    exit 1
 else
-   . install_functions.sh
+   . ./install_functions.sh
 fi
 
 case ${ID_LIKE} in
