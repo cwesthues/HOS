@@ -344,8 +344,7 @@ echo "Executing \$0 on \${HOSTNAME}"
 NAME=\`basename \$0 | sed s/".sh"//g\`
 LOG="/var/log/\${NAME}.log"
 
-LSF_TOP=\$1
-SHARED=\$2
+SHARED=\$1
 
 echo | tee -a \${LOG}
 echo "Argument 1 SHARED: \${SHARED}" | tee -a \${LOG}
