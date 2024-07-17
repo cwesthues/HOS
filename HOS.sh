@@ -36,7 +36,7 @@ esac
 
 ############################################################
 
-ALL_ADD_ONS="Apptainer Aspera BLAST Blender DataManager Sanger-in-a-box"
+ALL_ADD_ONS="Apptainer Aspera BLAST DataManager Intel-HPCKit Sanger-in-a-box"
 
 # easyEDA Explorer Geekbench Intel-HPCKit iRODS-shell Jupyter LS-DYNA LWS MatlabRuntime Multicluster Nextflow Octave OpenFOAM openMPI PlatformMPI ProcessManager R rDock RTM Simulator ScaleClient Spark Streamflow stress-ng Tensorflow Toil VeloxChem Yellowdog"
 
@@ -115,19 +115,6 @@ then
 fi
 #-----------------  BLAST -----------------
 
-#----------------  Blender ----------------
-RET=`echo " ${ADD_ONS} " | fgrep ' Blender '`
-if test "${RET}" != ""
-then
-   write_blender_compute
-   /tmp/blender_compute.sh
-   write_blender_master
-   /tmp/blender_master.sh ${LSF_TOP} ${SHARED}
-   write_blender_howto
-   /tmp/blender_howto.sh ${SHARED}
-fi
-#----------------  Blender ----------------
-
 #--------------  Datamanager --------------
 RET=`echo " ${ADD_ONS} " | fgrep ' DataManager '`
 if test "${RET}" != ""
@@ -138,6 +125,15 @@ then
    /tmp/datamanager_howto.sh
 fi
 #--------------  Datamanager --------------
+
+#-------------  Intel-HPCKit --------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Intel-HPCKit '`
+if test "${RET}" != ""
+then
+   write_intelhpckit
+   /tmp/intelhpckit.sh
+fi
+#-------------  Intel-HPCKit --------------
 
 #------------  Sanger-in-a-box ------------
 RET=`echo " ${ADD_ONS} " | fgrep ' Sanger-in-a-box '`
