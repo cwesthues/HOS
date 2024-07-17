@@ -10,6 +10,7 @@ OFF='\e[0;0m'
 ############################################################
 
 . /etc/os-release
+. install_functions.sh
 
 case ${ID_LIKE} in
 *rhel*|*fedora*)
@@ -59,3 +60,16 @@ ADD_ONS=`echo ${ADD_ONS} | sed s/","/" "/g`
 echo
 echo "You selected ${ADD_ONS}"
 
+RET=`echo " ${ADD_ONS} " | fgrep ' Sanger-in-a-box '`
+if test "${RET}" != ""
+then
+   write_sanger_in_a_box_master
+   /tmp/sanger_in_a_box_master.sh ${SHARED} ${LSF_TOP}
+   write_sanger_in_a_box_howto
+   /tmp/sanger_in_a_box_howto.sh ${SHARED}
+fi      
+
+
+
+
+done
