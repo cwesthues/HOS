@@ -5,7 +5,7 @@
 ############################################################
 
 write_application_center_master () {
-   cat >> /tmp/application_center_master.sh <<EOF1
+   cat > /tmp/application_center_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -92,7 +92,7 @@ EOF1
 }
 
 write_application_center_howto () {
-   cat >> /tmp/application_center_howto.sh <<EOF1
+   cat > /tmp/application_center_howto.sh <<EOF1
 #!/bin/sh
 
 PORT=\$1
@@ -132,7 +132,7 @@ EOF1
 ############################################################
 
 write_apptainer_master () {
-   cat >> /tmp/apptainer_master.sh <<EOF1
+   cat > /tmp/apptainer_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -203,7 +203,7 @@ EOF1
 }
 
 write_apptainer_compute () {
-   cat >> /tmp/apptainer_compute.sh <<EOF1
+   cat > /tmp/apptainer_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -232,7 +232,7 @@ EOF1
 }
 
 write_apptainer_howto () {
-   cat >> /tmp/apptainer_howto.sh <<EOF1
+   cat > /tmp/apptainer_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Apptainer.sh <<EOF2
@@ -267,7 +267,7 @@ EOF1
 ############################################################
 
 write_aspera_master () {
-   cat >> /tmp/aspera_master.sh <<EOF1
+   cat > /tmp/aspera_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -304,7 +304,7 @@ EOF1
 }
 
 write_aspera_howto () {
-   cat >> /tmp/aspera_howto.sh <<EOF1
+   cat > /tmp/aspera_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -333,7 +333,7 @@ EOF1
 ############################################################
 
 write_blast () {
-   cat >> /tmp/blast.sh <<EOF1
+   cat > /tmp/blast.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -360,7 +360,7 @@ EOF1
 }
 
 write_blast_howto () {
-   cat >> /tmp/blast_howto.sh <<EOF1
+   cat > /tmp/blast_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -406,7 +406,7 @@ EOF1
 ############################################################
 
 write_blender_master () {
-   cat >> /tmp/blender_master.sh <<EOF1
+   cat > /tmp/blender_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -476,7 +476,7 @@ EOF1
 }
 
 write_blender_compute () {
-   cat >> /tmp/blender_compute.sh <<EOF1
+   cat > /tmp/blender_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -502,7 +502,7 @@ EOF1
 }
 
 write_blender_howto () {
-   cat >> /tmp/blender_howto.sh <<EOF1
+   cat > /tmp/blender_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -663,7 +663,7 @@ EOF1
 ############################################################
 
 write_cloudprovider_api () {
-   cat >> /tmp/cloudprovider_api.sh <<EOF1
+   cat > /tmp/cloudprovider_api.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -713,7 +713,7 @@ EOF1
 ############################################################
 
 write_common_stuff () {
-   cat >> /tmp/common_stuff.sh <<EOF1
+   cat > /tmp/common_stuff.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -900,7 +900,7 @@ EOF1
 ############################################################
 
 write_datamanager_master () {
-   cat >> /tmp/datamanager_master.sh <<EOF1
+   cat > /tmp/datamanager_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -965,7 +965,7 @@ EOF1
 }
 
 write_datamanager_howto () {
-   cat >> /tmp/datamanager_howto.sh <<EOF1
+   cat > /tmp/datamanager_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -995,7 +995,7 @@ chmod 755 /tmp/datamanager_howto.sh
 ############################################################
 
 write_easyeda_master () {
-   cat >> /tmp/easyeda_master.sh <<EOF1
+   cat > /tmp/easyeda_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -1042,7 +1042,7 @@ EOF1
 }
 
 write_easyeda_compute () {
-   cat >> /tmp/easyeda_compute.sh <<EOF1
+   cat > /tmp/easyeda_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -1072,7 +1072,7 @@ EOF1
 }
 
 write_easyeda_howto () {
-   cat >> /tmp/easyeda_howto.sh <<EOF1
+   cat > /tmp/easyeda_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -1103,7 +1103,7 @@ EOF1
 ############################################################
 
 write_explorer_master () {
-   cat >> /tmp/explorer_master.sh <<EOF1
+   cat > /tmp/explorer_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -1280,7 +1280,7 @@ EOF1
 }
 
 write_explorer_howto () {
-   cat >> /tmp/explorer_howto.sh <<EOF1
+   cat > /tmp/explorer_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -1311,7 +1311,7 @@ chmod 755 /tmp/explorer_howto.sh
 ############################################################
 
 write_geekbench_compute () {
-   cat >> /tmp/geekbench_compute.sh <<EOF1
+   cat > /tmp/geekbench_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -1335,7 +1335,7 @@ EOF1
 }
 
 write_geekbench_howto () {
-   cat >> /tmp/geekbench_howto.sh <<EOF1
+   cat > /tmp/geekbench_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Geekbench.sh <<EOF2
@@ -1370,7 +1370,7 @@ EOF1
 ############################################################
 
 write_guacamole_master () {
-   cat >> /tmp/guacamole_master.sh <<EOF1
+   cat > /tmp/guacamole_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -1927,7 +1927,7 @@ EOF1
 ############################################################
 
 write_hostfactory_master () {
-   cat >> /tmp/hostfactory_master.sh <<EOF1
+   cat > /tmp/hostfactory_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2111,7 +2111,7 @@ EOF1
 ############################################################
 
 write_hostname_dyndns () {
-   cat >> /tmp/hostname_dyndns.sh <<EOF1
+   cat > /tmp/hostname_dyndns.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2144,7 +2144,7 @@ EOF1
 ############################################################
 
 write_intelhpckit () {
-   cat >> /tmp/intelhpckit.sh <<EOF1
+   cat > /tmp/intelhpckit.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2176,7 +2176,7 @@ EOF1
 }
 
 write_intelhpckit_howto () {
-   cat >> /tmp/intelhpckit_howto.sh <<EOF1
+   cat > /tmp/intelhpckit_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Intel-HPCKit.sh <<EOF2
@@ -2199,7 +2199,7 @@ EOF1
 ############################################################
 
 write_irods () {
-   cat >> /tmp/irods.sh <<EOF1
+   cat > /tmp/irods.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2232,7 +2232,7 @@ EOF1
 }
 
 write_irods_howto () {
-   cat >> /tmp/irods_howto.sh <<EOF1
+   cat > /tmp/irods_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_iRODS_shell.sh <<EOF2
@@ -2255,7 +2255,7 @@ EOF1
 ############################################################
 
 write_jupyter_howto () {
-   cat >> /tmp/jupyter_howto.sh <<EOF1
+   cat > /tmp/jupyter_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2297,7 +2297,7 @@ EOF1
 }
 
 write_jupyter_compute () {
-   cat >> /tmp/jupyter_compute.sh <<EOF1
+   cat > /tmp/jupyter_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2501,7 +2501,7 @@ EOF1
 ############################################################
 
 write_ldap () {
-   cat >> /tmp/ldap.sh <<EOF1
+   cat > /tmp/ldap.sh <<EOF1
 #!/bin/sh
 
 DOMAIN=\$1
@@ -2541,7 +2541,7 @@ EOF1
 }
 
 write_ldap_howto () {
-   cat >> /tmp/ldap_howto.sh <<EOF1
+   cat > /tmp/ldap_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_LDAP.sh <<EOF2
@@ -2565,7 +2565,7 @@ EOF1
 ############################################################
 
 write_licensescheduler_master () {
-   cat >> /tmp/licensescheduler_master.sh <<EOF1
+   cat > /tmp/licensescheduler_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2685,7 +2685,7 @@ EOF1
 }
 
 write_licensescheduler_howto () {
-   cat >> /tmp/licensescheduler_howto.sh <<EOF1
+   cat > /tmp/licensescheduler_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Licensescheduler.sh <<EOF2
@@ -2727,7 +2727,7 @@ EOF1
 ############################################################
 
 write_lsdyna_compute () {
-   cat >> /tmp/lsdyna_compute.sh <<EOF1
+   cat > /tmp/lsdyna_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2750,7 +2750,7 @@ EOF1
 }
 
 write_lsdyna_howto () {
-   cat >> /tmp/lsdyna_howto.sh <<EOF1
+   cat > /tmp/lsdyna_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_LS-DYNA.sh <<EOF2
@@ -2786,7 +2786,7 @@ EOF1
 ############################################################
 
 write_lsf () {
-   cat >> /tmp/lsf.sh <<EOF1
+   cat > /tmp/lsf.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -2974,7 +2974,7 @@ EOF1
 
 write_lws_master () {
    SHARED=$1
-   cat >> /tmp/lws_master.sh <<EOF1
+   cat > /tmp/lws_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3049,7 +3049,7 @@ EOF1
 
 write_lws_howto () {
    SHARED=$1
-   cat >> /tmp/lws_howto.sh <<EOF1
+   cat > /tmp/lws_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_LWS.sh <<EOF2
@@ -3077,7 +3077,7 @@ EOF1
 
 write_matlab_master () {
    SHARED=$1
-   cat >> /tmp/matlab_master.sh <<EOF1
+   cat > /tmp/matlab_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3108,7 +3108,7 @@ EOF1
 
 write_matlab_howto () {
    SHARED=$1
-   cat >> /tmp/matlab_howto.sh <<EOF1
+   cat > /tmp/matlab_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_MATLAB_Runtime.sh <<EOF2
@@ -3134,7 +3134,7 @@ EOF1
 
 write_monitoring () {
    SHARED=$1
-   cat >> /tmp/monitoring.sh <<EOF1
+   cat > /tmp/monitoring.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3187,7 +3187,7 @@ EOF1
 ############################################################
 
 write_multicluster_master () {
-   cat >> /tmp/multicluster_master.sh <<EOF1
+   cat > /tmp/multicluster_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3325,7 +3325,7 @@ EOF1
 }
 
 write_multicluster_howto () {
-   cat >> /tmp/multicluster_howto.sh <<EOF1
+   cat > /tmp/multicluster_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Multicluster.sh <<EOF2
@@ -3350,7 +3350,7 @@ EOF1
 ############################################################
 
 write_nextflow_master () {
-   cat >> /tmp/nextflow_master.sh <<EOF1
+   cat > /tmp/nextflow_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3406,7 +3406,7 @@ EOF1
 }
 
 write_nextflow_compute () {
-   cat >> /tmp/nextflow_compute.sh <<EOF1
+   cat > /tmp/nextflow_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3424,7 +3424,7 @@ EOF1
 }
 
 write_nextflow_howto () {
-   cat >> /tmp/nextflow_howto.sh <<EOF1
+   cat > /tmp/nextflow_howto.sh <<EOF1
 #!/bin/sh
 
 SHARED=\$1
@@ -3508,7 +3508,7 @@ EOF1
 ############################################################
 
 write_nfs_master () {
-   cat >> /tmp/nfs_master.sh <<EOF1
+   cat > /tmp/nfs_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3550,7 +3550,7 @@ EOF1
 }
 
 write_nfs_compute () {
-   cat >> /tmp/nfs_compute.sh <<EOF1
+   cat > /tmp/nfs_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3615,7 +3615,7 @@ EOF1
 ############################################################
 
 write_octave_master () {
-   cat >> /tmp/octave_master.sh <<EOF1
+   cat > /tmp/octave_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3667,7 +3667,7 @@ EOF1
 }
 
 write_octave_compute () {
-   cat >> /tmp/octave_compute.sh <<EOF1
+   cat > /tmp/octave_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3686,7 +3686,7 @@ EOF1
 }
 
 write_octave_howto () {
-   cat >> /tmp/octave_howto.sh <<EOF1
+   cat > /tmp/octave_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Octave.sh <<EOF2
@@ -3723,7 +3723,7 @@ EOF1
 ###########################################################
 
 write_openfoam_master () {
-   cat >> /tmp/openfoam_master.sh <<EOF1
+   cat > /tmp/openfoam_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3808,7 +3808,7 @@ EOF1
 }
 
 write_openfoam_compute () {
-   cat >> /tmp/openfoam_compute.sh <<EOF1
+   cat > /tmp/openfoam_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3832,7 +3832,7 @@ EOF1
 }
 
 write_openfoam_howto () {
-   cat >> /tmp/openfoam_howto.sh <<EOF1
+   cat > /tmp/openfoam_howto.sh <<EOF1
 #!/bin/sh
 
 SHARED=\$1
@@ -3875,7 +3875,7 @@ EOF1
 ############################################################
 
 write_openmpi_master () {
-   cat >> /tmp/openmpi_master.sh <<EOF1
+   cat > /tmp/openmpi_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3949,7 +3949,7 @@ EOF1
 }
 
 write_openmpi_compute () {
-   cat >> /tmp/openmpi_compute.sh <<EOF1
+   cat > /tmp/openmpi_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -3995,7 +3995,7 @@ EOF1
 }
 
 write_openmpi_howto () {
-   cat >> /tmp/openmpi_howto.sh <<EOF1
+   cat > /tmp/openmpi_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4043,7 +4043,7 @@ EOF1
 ############################################################
 
 write_platformmpi_master () {
-   cat >> /tmp/platformmpi_master.sh <<EOF1
+   cat > /tmp/platformmpi_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4086,7 +4086,7 @@ EOF1
 }
 
 write_platformmpi_compute () {
-   cat >> /tmp/platformmpi_compute.sh <<EOF1
+   cat > /tmp/platformmpi_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4125,7 +4125,7 @@ EOF1
 }
 
 write_platformmpi_howto () {
-   cat >> /tmp/platformmpi_howto.sh <<EOF1
+   cat > /tmp/platformmpi_howto.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4172,7 +4172,7 @@ EOF1
 ############################################################
 
 write_podman_master () {
-   cat >> /tmp/podman_master.sh <<EOF1
+   cat > /tmp/podman_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4276,7 +4276,7 @@ EOF1
 }
 
 write_podman_compute () {
-   cat >> /tmp/podman_compute.sh <<EOF1
+   cat > /tmp/podman_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4337,7 +4337,7 @@ EOF1
 }
 
 write_podman_howto () {
-   cat >> /tmp/podman_howto.sh <<EOF1
+   cat > /tmp/podman_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Podman.sh <<EOF2
@@ -4372,7 +4372,7 @@ EOF1
 ############################################################
 
 write_process_manager_master () {
-   cat >> /tmp/process_manager_master.sh <<EOF1
+   cat > /tmp/process_manager_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4454,7 +4454,7 @@ EOF1
 }
 
 write_process_manager_howto () {
-   cat >> /tmp/process_manager_howto.sh <<EOF1
+   cat > /tmp/process_manager_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_ProcessManager.sh <<EOF2
@@ -4480,7 +4480,7 @@ EOF1
 ############################################################
 
 write_r () {
-   cat >> /tmp/r.sh <<EOF1
+   cat > /tmp/r.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4509,7 +4509,7 @@ EOF1
 }
 
 write_r_howto () {
-   cat >> /tmp/r_howto.sh <<EOF1
+   cat > /tmp/r_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_R.sh <<EOF2
@@ -4544,7 +4544,7 @@ EOF1
 ############################################################
 
 write_rdock () {
-   cat >> /tmp/rdock.sh <<EOF1
+   cat > /tmp/rdock.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4580,7 +4580,7 @@ EOF1
 }
 
 write_rdock_howto () {
-   cat >> /tmp/rdock_howto.sh <<EOF1
+   cat > /tmp/rdock_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_rDock.sh <<EOF2
@@ -4615,7 +4615,7 @@ EOF1
 ############################################################
 
 write_rdp_master () {
-   cat >> /tmp/rdp_master.sh <<EOF1
+   cat > /tmp/rdp_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -4897,7 +4897,7 @@ EOF1
 ############################################################
 
 write_resource_connector_master () {
-   cat >> /tmp/resource_connector_master.sh <<EOF1
+   cat > /tmp/resource_connector_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -5036,7 +5036,7 @@ EOF1
 }
 
 write_resource_connector_howto () {
-   cat >> /tmp/resource_connector_howto.sh <<EOF1
+   cat > /tmp/resource_connector_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_ResourceConnector.sh <<EOF2
@@ -5060,7 +5060,7 @@ EOF1
 ############################################################
 
 write_rtm_master () {
-   cat >> /tmp/rtm_master.sh <<EOF1
+   cat > /tmp/rtm_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -5536,7 +5536,7 @@ EOF1
 }
 
 write_rtm_howto () {
-   cat >> /tmp/rtm_howto.sh <<EOF1
+   cat > /tmp/rtm_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_RTM.sh <<EOF2
@@ -5598,7 +5598,7 @@ EOF1
 ############################################################
 
 write_sanger_in_a_box_master () {
-   cat >> /tmp/sanger_in_a_box_master.sh <<EOF1
+   cat > /tmp/sanger_in_a_box_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -5938,7 +5938,7 @@ EOF1
 }
 
 write_sanger_in_a_box_compute () {
-   cat >> /tmp/sanger_in_a_box_compute.sh <<EOF1
+   cat > /tmp/sanger_in_a_box_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -5962,7 +5962,7 @@ EOF1
 }
 
 write_sanger_in_a_box_howto () {
-   cat >> /tmp/sanger_in_a_box_howto.sh <<EOF1
+   cat > /tmp/sanger_in_a_box_howto.sh <<EOF1
 #!/bin/sh
 
 SOFTWARE=\$1
@@ -6142,7 +6142,7 @@ EOF1
 ############################################################
 
 write_scaleclient() {
-   cat >> /tmp/scaleclient.sh <<EOF1
+   cat > /tmp/scaleclient.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -6245,7 +6245,7 @@ EOF1
 ############################################################
 
 write_simulator_master () {
-   cat >> /tmp/simulator_master.sh <<EOF1
+   cat > /tmp/simulator_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -6367,7 +6367,7 @@ EOF1
 }
 
 write_simulator_howto () {
-   cat >> /tmp/simulator_howto.sh <<EOF1
+   cat > /tmp/simulator_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_LSF-Simulator.sh <<EOF2
@@ -6422,7 +6422,7 @@ EOF1
 # https://www.ni-sp.com/slurm-build-script-and-container-commercial-support/
 
 write_slurm_master () {
-   cat >> /tmp/slurm_master.sh <<EOF1
+   cat > /tmp/slurm_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -6698,7 +6698,7 @@ EOF1
 }
 
 write_slurm_compute () {
-   cat >> /tmp/slurm_compute.sh <<EOF1
+   cat > /tmp/slurm_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -6886,7 +6886,7 @@ EOF1
 }
 
 write_slurm_howto () {
-   cat >> /tmp/slurm_howto.sh <<EOF1
+   cat > /tmp/slurm_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_SLURM.sh <<EOF2
@@ -6932,7 +6932,7 @@ EOF1
 ############################################################
 
 write_spark_master () {
-   cat >> /tmp/spark_master.sh <<EOF1
+   cat > /tmp/spark_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7037,7 +7037,7 @@ EOF1
 }
 
 write_spark_compute () {
-   cat >> /tmp/spark_compute.sh <<EOF1
+   cat > /tmp/spark_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7082,7 +7082,7 @@ EOF1
 }
 
 write_spark_howto () {
-   cat >> /tmp/spark_howto.sh <<EOF1
+   cat > /tmp/spark_howto.sh <<EOF1
 #!/bin/sh
 
 SHARED=\$1
@@ -7119,7 +7119,7 @@ EOF1
 ############################################################
 
 write_streamflow_master () {
-   cat >> /tmp/streamflow_master.sh <<EOF1
+   cat > /tmp/streamflow_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7189,7 +7189,7 @@ EOF1
 }
 
 write_streamflow_howto () {
-   cat >> /tmp/streamflow_howto.sh <<EOF1
+   cat > /tmp/streamflow_howto.sh <<EOF1
 #!/bin/sh
 
 SHARED=\$1
@@ -7261,7 +7261,7 @@ EOF1
 ############################################################
 
 write_stressng_compute () {
-   cat >> /tmp/stressng_compute.sh <<EOF1
+   cat > /tmp/stressng_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7289,7 +7289,7 @@ EOF1
 }
 
 write_stressng_howto () {
-   cat >> /tmp/stressng_howto.sh <<EOF1
+   cat > /tmp/stressng_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_stress-ng.sh <<EOF2
@@ -7324,7 +7324,7 @@ EOF1
 ############################################################
 
 write_symphony () {
-   cat >> /tmp/symphony.sh <<EOF1
+   cat > /tmp/symphony.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7416,7 +7416,7 @@ EOF1
 }
 
 write_symphony_howto () {
-   cat >> /tmp/symphony_howto.sh <<EOF1
+   cat > /tmp/symphony_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Symphony.sh <<EOF2
@@ -7459,15 +7459,8 @@ EOF1
 ##################### Tensorflow start #####################
 ############################################################
 
-
-
-
-
-
-
-
 write_tensorflow_master () {
-   cat >> /tmp/tensorflow_master.sh <<EOF1
+   cat > /tmp/tensorflow_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7519,7 +7512,7 @@ EOF1
 }
 
 write_tensorflow_compute () {
-   cat >> /tmp/tensorflow_compute.sh <<EOF1
+   cat > /tmp/tensorflow_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7538,7 +7531,7 @@ EOF1
 }
 
 write_tensorflow_howto () {
-   cat >> /tmp/tensorflow_howto.sh <<EOF1
+   cat > /tmp/tensorflow_howto.sh <<EOF1
 #!/bin/sh
 
 cat >> ~/HowTo_Tensorflow.sh <<EOF2
@@ -7587,7 +7580,7 @@ EOF1
 ############################################################
 
 write_toil_master () {
-   cat >> /tmp/toil_master.sh <<EOF1
+   cat > /tmp/toil_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7636,7 +7629,7 @@ EOF1
 }
 
 write_toil_compute () {
-   cat >> /tmp/toil_compute.sh <<EOF1
+   cat > /tmp/toil_compute.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7666,7 +7659,7 @@ EOF1
 }
 
 write_toil_howto () {
-   cat >> /tmp/toil_howto.sh <<EOF1
+   cat > /tmp/toil_howto.sh <<EOF1
 #!/bin/sh
 
 SHARED=\$1
@@ -7712,7 +7705,7 @@ EOF1
 ############################################################
 
 write_veloxchem_master () {
-   cat >> /tmp/veloxchem_master.sh <<EOF1
+   cat > /tmp/veloxchem_master.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release
@@ -7851,7 +7844,7 @@ EOF1
 }
 
 write_veloxchem_howto () {
-   cat >> /tmp/veloxchem_howto.sh <<EOF1
+   cat > /tmp/veloxchem_howto.sh <<EOF1
 #!/bin/sh
 
 SHARED=\$1
@@ -7890,7 +7883,7 @@ EOF1
 ############################################################
 
 write_yellowdog () {
-   cat >> /tmp/yellowdog.sh <<EOF1
+   cat > /tmp/yellowdog.sh <<EOF1
 #!/bin/sh
 
 . /etc/os-release

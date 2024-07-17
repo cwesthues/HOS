@@ -7,6 +7,8 @@ SHARED="/shared"
 LSF_TOP="/opt/ibm/lsf"
 EOF
 chmod 755 /var/environment.sh
+. /var/environment.sh
+
 
 ############################################################
 
@@ -80,8 +82,8 @@ if test "${RET}" != ""
 then
    write_apptainer_compute
    /tmp/apptainer_compute.sh
-   mkdir -p ${LSF_TOP}/apptainer/images
-   apptainer build ${LSF_TOP}/apptainer/images/ubuntu.sif docker://ubuntu
+   mkdir -p ${SHARED}/apptainer/images
+   apptainer build ${SHARED}/apptainer/images/ubuntu.sif docker://ubuntu
    cd ${LSF_TOP}
    chmod -R 777  apptainer/images
    write_apptainer_master ${LSF_TOP}
