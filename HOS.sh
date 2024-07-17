@@ -85,11 +85,22 @@ then
    mkdir -p ${SHARED}/apptainer/images
    rm -rf ${SHARED}/apptainer/images/*
    apptainer build ${SHARED}/apptainer/images/ubuntu.sif docker://ubuntu
-   chmod -R 777  ${SHARED}/apptaine/images
+   chmod -R 777  ${SHARED}/apptainer/images
    write_apptainer_howto
    /tmp/apptainer_howto.sh
 fi
 #---------------  Apptainer ---------------
+
+#-----------------  Aspera ----------------
+RET=`echo " ${ADD_ONS} " | fgrep ' Aspera '`
+if test "${RET}" != ""
+then
+   write_aspera_master
+   /tmp/aspera_master.sh
+   write_aspera_howto
+   /tmp/aspera_howto.sh
+fi
+#-----------------  Aspera ----------------
 
 #------------  Sanger-in-a-box ------------
 RET=`echo " ${ADD_ONS} " | fgrep ' Sanger-in-a-box '`
