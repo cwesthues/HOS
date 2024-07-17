@@ -502,10 +502,8 @@ do
    fi
 done
 
-if test "${LOC}" = ""
+if test "${LOC}" != ""
 then
-   echo "Can't see ${PACKAGE} in any of ${CAND}"
-else
    echo "SW repository found under ${LOC}"
 fi
 
