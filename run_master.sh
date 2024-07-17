@@ -84,12 +84,18 @@ ID_RSA_PUB_BASE64="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ID_RSA_PRIV_BASE64="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 mkdir -p /root/.ssh
-echo "${ID_RSA_PRIV_BASE64}" | base64 -d > /root/.ssh/id_rsa
-chmod 600 /root/.ssh/id_rsa
-echo "${ID_RSA_PUB_BASE64}" | base64 -d > /root/.ssh/id_rsa.pub
-chmod 644 /root/.ssh/id_rsa.pub
-cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
-chmod 600 /root/.ssh/authorized_keys
+if test "${ID_RSA_PRIV_BASE64}" != ""
+then
+   echo "${ID_RSA_PRIV_BASE64}" | base64 -d > /root/.ssh/id_rsa
+   chmod 600 /root/.ssh/id_rsa
+fi
+if test "${ID_RSA_PUB_BASE64}" != ""
+then
+   echo "${ID_RSA_PUB_BASE64}" | base64 -d > /root/.ssh/id_rsa.pub
+   chmod 644 /root/.ssh/id_rsa.pub
+   cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+   chmod 600 /root/.ssh/authorized_keys
+fi
 
 ID_RSA_PUB=`cat /root/.ssh/id_rsa.pub`
 ID_RSA_PUB_BASE64=`cat /root/.ssh/id_rsa.pub | base64 -w0`
