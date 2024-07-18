@@ -138,7 +138,7 @@ RET=`echo " ${ADD_ONS} " | fgrep ' Intel-HPCKit '`
 if test "${RET}" != ""
 then
    write_intelhpckit
-   /tmp/intelhpckit.sh
+   /tmp/intelhpckit.sh ${SHARED}
 fi
 #-------------  Intel-HPCKit --------------
 
@@ -148,6 +148,8 @@ if test "${RET}" != ""
 then
    write_irods
    /tmp/irods.sh
+   write_irods_howto
+   /tmp/irods_howto.sh
 fi
 #--------------  iRODS-shell --------------
 
@@ -156,7 +158,7 @@ RET=`echo " ${ADD_ONS} " | fgrep ' LS-DYNA '`
 if test "${RET}" != ""
 then
    write_lsdyna_compute
-   /tmp/lsdyna_compute.sh
+   /tmp/lsdyna_compute.sh ${SHARED}
 fi
 #----------------  LS-DYNA ----------------
 
@@ -200,7 +202,7 @@ RET=`echo " ${ADD_ONS} " | fgrep ' R '`
 if test "${RET}" != ""
 then
    write_r
-   /tmp/r.sh
+   /tmp/r.sh ${SHARED}
    write_r_howto
    /tmp/r_howto.sh
 fi
@@ -257,7 +259,7 @@ RET=`echo " ${ADD_ONS} " | fgrep ' stress-ng '`
 if test "${RET}" != ""
 then
    write_stressng_compute
-   /tmp/stressng_compute.sh ${LSF_TOP}
+   /tmp/stressng_compute.sh ${SHARED}
    write_stressng_howto
    /tmp/stressng_howto.sh
 fi

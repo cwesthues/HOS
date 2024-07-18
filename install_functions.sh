@@ -962,17 +962,14 @@ End Queue
 EOF2
    mkdir -p \${STAGING}
    chmod 777 \${STAGING}
-   if test "\${REGION}" = "onprem"
+   echo "Restarting LSF" | tee -a \${LOG}
+   RET=\`systemctl status lsfd\`
+   if test "\${RET}" = ""
    then
-      echo "Restarting LSF" | tee -a \${LOG}
-      RET=\`systemctl status lsfd\`
-      if test "\${RET}" = ""
-      then
-         . \${LSF_TOP}/conf/profile.lsf
-         lsf_daemons restart
-      else
-         systemctl restart lsfd
-      fi
+      . \${LSF_TOP}/conf/profile.lsf
+      lsf_daemons restart
+   else
+      systemctl restart lsfd
    fi
 fi
 EOF1
@@ -2170,6 +2167,13 @@ echo "Executing \$0 on \${HOSTNAME}"
 NAME=\`basename \$0 | sed s/".sh"//g\`
 LOG="/var/log/\${NAME}.log"
 
+SHARED=\$1
+
+echo | tee -a \${LOG}
+echo "Argument 1 SHARED: \${SHARED}" | tee -a \${LOG}
+echo | tee -a \${LOG}
+
+
 echo "Installing Intel-HPCKit" | tee -a \${LOG}
 
 case \${ID_LIKE} in 
@@ -2186,6 +2190,13 @@ esac
 cd /tmp
 curl -LO https://registrationcenter-download.intel.com/akdlm/IRC_NAS/7f096850-dc7b-4c35-90b5-36c12abd9eaa/l_HPCKit_p_2024.1.0.560_offline.sh >> \${LOG} 2>&1
 sh ./l_HPCKit_p_2024.1.0.560_offline.sh -a --silent --eula=accept >> \${LOG} 2>&1
+
+if test \${SHARED} != ""
+then
+   echo "Moving to \${SHARED}" | tee -a \${LOG}
+   mv /opt/intel \${SHARED}
+   ln -s \${SHARED}/intel /opt/intel
+fi
 EOF1
    chmod 755 /tmp/intelhpckit.sh
 }
@@ -2753,6 +2764,12 @@ echo "Executing \$0 on \${HOSTNAME}" | tee -a \${LOG}
 NAME=\`basename \$0 | sed s/".sh"//g\`
 LOG="/var/log/\${NAME}.log"
 
+SHARED=\$1
+
+echo | tee -a \${LOG}
+echo "Argument 1 SHARED: \${SHARED}" | tee -a \${LOG}
+echo | tee -a \${LOG}
+
 echo "Downloading LS-DYNA" | tee -a \${LOG}
 cd /usr/bin
 curl -u user:computer -LO https://ftp.lstc.com/user/ls-dyna/R13.1.0/linx.64/ls-dyna_smp_s_R13_1_0_centos79_intel190.tar.gz_extractor.sh >> \${LOG} 2>&1
@@ -2760,6 +2777,15 @@ echo "Installing LS-DYNA" | tee -a \${LOG}
 chmod 755 ls-dyna_smp_s_R13_1_0_centos79_intel190.tar.gz_extractor.sh
 ./ls-dyna_smp_s_R13_1_0_centos79_intel190.tar.gz_extractor.sh --skip-license >> \${LOG} 2>&1
 rm -rf ls-dyna_smp_s_R13_1_0_centos79_intel190.tar.gz_extractor.sh
+
+if test \${SHARED} != ""
+then
+   echo "Moving to \${SHARED}" | tee -a \${LOG}
+   mkdir -p \${SHARED}/dyna
+   mv /usr/bin/ls-dyna_smp_s_R13_1_0_x64_centos79_ifort190 \${SHARED}/dyna
+   ln -s \${SHARED}/dyna/ls-dyna_smp_s_R13_1_0_x64_centos79_ifort190 /usr/bin/ls-dyna_smp_s_R13_1_0_x64_centos79_ifort190
+fi
+
 EOF1
    chmod 755 /tmp/lsdyna_compute.sh
 }
@@ -4506,6 +4532,12 @@ echo "Executing \$0 on \${HOSTNAME}"
 NAME=\`basename \$0 | sed s/".sh"//g\`
 LOG="/var/log/\${NAME}.log"
 
+SHARED=\$1
+
+echo | tee -a \${LOG}
+echo "Argument 1 SHARED: \${SHARED}" | tee -a \${LOG}
+echo | tee -a \${LOG}
+
 echo "Installing R" | tee -a \${LOG}
 case \${ID_LIKE} in
 *rhel*|*fedora*)
@@ -4519,6 +4551,13 @@ case \${ID_LIKE} in
    cd /tmp
 ;;
 esac
+
+if test \${SHARED} != ""
+then
+   echo "Moving to \${SHARED}" | tee -a \${LOG}
+   mv /usr/lib64/R \${SHARED}
+   ln -s \${SHARED}/R /usr/lib64/R
+fi
 EOF1
    chmod 755 /tmp/r.sh
 }
@@ -5871,7 +5910,7 @@ echo "export PATH=/software/CASM/cgpVcf/bin:\\\${PATH}" >> /home/lsfadmin/.bashr
 export CGP_PERLLIBS="/software/CASM/cgpVcf/lib/perl5:\${CGP_PERLLIBS}"
 echo "export CGP_PERLLIBS=/software/CASM/cgpVcf/lib/perl5:\\\${CGP_PERLLIBS}" >> /root/.bashrc
 echo "export CGP_PERLLIBS=/software/CASM/cgpVcf/lib/perl5:\\\${CGP_PERLLIBS}" >> /home/lsfadmin/.bashrc
-echo "########## cgpVcf end ##########" | tee -a \${LOG}
+echo "########## cgpVf end ##########" | tee -a \${LOG}
 
 echo "########## VAGrENT start ##########" | tee -a \${LOG}
 # Depends on: none
@@ -5931,9 +5970,13 @@ cd /tmp
 git clone --recurse-submodules http://github.com/PapenfussLab/gridss >> \${LOG} 2>&1
 cd gridss/src/main/c/gridsstools/htslib
 echo "Setup gridss" | tee -a \${LOG}
-autoreconf -i && ./configure && make >> \${LOG} 2>&1
+autoreconf -i >> \${LOG} 2>&1
+./configure >> \${LOG} 2>&1
+make >> \${LOG} 2>&1
 cd ..
-autoreconf -i && ./configure && make all >> \${LOG} 2>&1
+autoreconf -i >> \${LOG} 2>&1
+./configure >> \${LOG} 2>&1
+make all >> \${LOG} 2>&1
 cp /tmp/gridss/src/main/c/gridsstools/gridsstools /usr/bin
 echo "########## gridss end ##########" | tee -a \${LOG}
 
