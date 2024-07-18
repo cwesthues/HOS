@@ -5710,8 +5710,8 @@ case \${ID_LIKE} in
    yum -y --nogpgcheck install \\
       autoconf automake bzip2 bzip2-devel cpan expat-devel gcc git gmp-devel \\
       gnutls-devel libcurl-devel libtasn1-devel make ncurses-devel \\
-      nettle-devel perl-WWW-RobotRules perl-XML-LibXML python-devel \\
-      xz-devel zlib-devel >> \${LOG} 2>&1
+      nettle-devel perl-devel perl-WWW-RobotRules perl-XML-LibXML \\
+      python-devel xz-devel zlib-devel >> \${LOG} 2>&1
    crb enable >> \${LOG} 2>&1
    yum -y --nogpgcheck install R >> \${LOG} 2>&1
    PIP="pip"
@@ -5728,6 +5728,7 @@ case \${ID_LIKE} in
 ;;
 esac
 
+rm -rf \${SOFTWARE}/CASM
 mkdir -p \${SOFTWARE}/CASM
 ln -s \${SOFTWARE} /software
 
