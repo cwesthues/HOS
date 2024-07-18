@@ -7,7 +7,7 @@ echo -n "Enter shared path (<Enter> for '${FOUND_SHARED}'): "
 read SHARED
 if test "${SHARED}" = ""
 then
-   SHARED="${SHARED}"
+   SHARED="${FOUND_SHARED}"
 fi
 
 
