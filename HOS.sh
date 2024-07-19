@@ -45,7 +45,7 @@ esac
 
 ############################################################
 
-ALL_ADD_ONS="Apptainer Aspera BLAST DataManager Intel-HPCKit iRODS-shell LS-DYNA MatlabRuntime Nextflow Octave R rDock Sanger-in-a-box Spark Streamflow stress-ng Tensorflow Toil VeloxChem"
+ALL_ADD_ONS="Apptainer Aspera BLAST DataManager Intel-HPCKit iRODS-shell LS-DYNA MatlabRuntime Nextflow R Sanger-in-a-box Spark Streamflow stress-ng"
 
 echo ${ESC} ""
 echo ${ESC} "${BLUE}Select Add-On's${OFF}"

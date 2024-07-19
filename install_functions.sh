@@ -3433,6 +3433,10 @@ fi
 
 echo "Installing Java" | tee -a \${LOG}
 case \\\${ID_LIKE} in
+   *rhel*|*fedora*)
+      rpm -e --nodeps ibm-jre 1>/dev/null 2>/dev/null
+      yum -y --nogpgcheck install java-11-openjdk 1>/dev/null 2>/dev/null
+   ;;
 *debian*)
    apt -y update >> \${LOG} 2>&1
    export DEBIAN_FRONTEND=noninteractive
@@ -7201,7 +7205,7 @@ chmod -R 777 \${SHARED}/streamflow
 echo "Installing packages" | tee -a \${LOG}
 case \${ID_LIKE} in
 *rhel*|*fedora*)
-   yum -y --nogpgcheck install pip python-devel git coreutils >> \${LOG} 2>&1
+   yum -y --nogpgcheck install nodejs pip python-devel git coreutils >> \${LOG} 2>&1
 ;;
 *debian*)
    apt -y update >> \${LOG} 2>&1
