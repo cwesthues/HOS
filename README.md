@@ -25,6 +25,21 @@ Actually supported add-ons/example apps:
 
 STEP 1 : Install IBM Cloud HPC Tile
 
+Example values.json:
+
+{
+"ibmcloud_api_key"                                 : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+"resource_group"                                   : "XXXXXXX",
+"reservation_id"                                   : "XXXXXXXXXXXXXXXXXXXXXXXXX",
+"cluster_id"                                       : "XXXXXXXXX",
+"bastion_ssh_keys"                                 : "[\"key-arch-ibm-hpc\"]",
+"compute_ssh_keys"                                 : "[\"key-arch-ibm-hpc\"]",
+"remote_allowed_ips"                               : "[\"11.22.33.44\"]",
+"zones"                                            : "[\"eu-de-3\"]"
+}
+
+
+
 
 https://cloud.ibm.com/docs/allowlist/hpc-service
 
