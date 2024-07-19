@@ -48,6 +48,8 @@ https://cloud.ibm.com/docs/allowlist/hpc-service
 
 STEP 2: Login to LSF master as root
 
-        git clone https://github.com/cwesthues/HOS
+```
+git clone https://github.com/cwesthues/HOS
 
-        ./HOS.sh
+./HOS.sh
+```
