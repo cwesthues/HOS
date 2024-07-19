@@ -5676,8 +5676,6 @@ echo "Install Sanger-in-a-box" | tee -a \${LOG}
 # Based upon:
 # https://github.com/cancerit
 
-#cwecwe
-
 echo "Modify LSF configuration" | tee -a \${LOG}
 
 LSF_CLUSTER_NAME=\`ls \${LSF_TOP}/conf/lsbatch\`
@@ -5861,7 +5859,6 @@ cd /tmp
 git clone https://github.com/cancerit/cgpPindel >> \${LOG} 2>&1
 cd cgpPindel
 echo "Setup cgpPindel" | tee -a \${LOG}
-#cwecwe
 export CGP_PERLLIBS=/tmp/PCAP-core/lib
 ./setup.sh \${SOFTWARE}/CASM/cgpPindel >> \${LOG} 2>&1
 export PATH="/software/CASM/cgpPindel/bin:\${PATH}"
@@ -7332,6 +7329,12 @@ echo "Executing \$0 on \${HOSTNAME}" | tee -a \${LOG}
 NAME=\`basename \$0 | sed s/".sh"//g\`
 LOG="/var/log/\${NAME}.log"
 
+SHARED=\$1
+
+echo | tee -a \${LOG}
+echo "Argument 1 SHARED: \${SHARED}" | tee -a \${LOG}
+echo | tee -a \${LOG}
+
 echo "Installing stress-ng" | tee -a \${LOG}
 
 case \${ID_LIKE} in
@@ -7343,6 +7346,14 @@ case \${ID_LIKE} in
    apt -y -qq install stress-ng >> \${LOG} 2>&1
 ;;
 esac
+
+if test \${SHARED} != ""
+then
+   echo "Moving to \${SHARED}" | tee -a \${LOG}
+   mkdir -p \${SHARED}/stress-ng
+   mv /usr/bin/stress-ng \${SHARED}/stress-ng
+   ln -s \${SHARED}/stress-ng/stress-ng /usr/bin/stress-ng
+fi
 
 EOF1
    chmod 755 /tmp/stressng_compute.sh
