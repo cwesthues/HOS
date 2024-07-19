@@ -42,6 +42,6 @@ STEP 2: Login to LSF master as root
 
         git clone https://github.com/cwesthues/HOS
 
-        ./run_master.sh
+        ./HOS.sh
 
 
