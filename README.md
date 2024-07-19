@@ -25,7 +25,7 @@ add 'add-ons' and example applications on top of an existing IBM HPC Tile.
 Here is a list of actually supported add-ons/example apps:
 | Application     | Version  | Description                 |
 | :---            | :----:   | :---                        |
-| Apptainer       | 1.3.3    | sdfdsfsdfsdf |
+| Apptainer       | 1.3.3    | Apptainer is an open-source container platform designed for high-performance computing (HPC) environments, emphasizing security and compatibility. It enables users to create, manage, and run portable, reproducible software containers. |
 | Aspera          | 4.4.2    |dsfsdfsdf |
 | BLAST           | 2.16.0   |
 | DataManager     | 10.1     |
