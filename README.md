@@ -50,5 +50,6 @@ STEP 2: Login to LSF master as root
 
 ```
 git clone https://github.com/cwesthues/HOS
+cd HOS
 ./HOS.sh
 ```
