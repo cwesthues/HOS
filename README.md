@@ -64,7 +64,7 @@ Enter shared path (<Enter> for '/shared'):
 Select Add-On's
 ===============
 Apptainer Aspera BLAST DataManager Intel-HPCKit iRODS-shell LS-DYNA
-MatlabRuntime Nextflow R Sanger-in-a-box Spark Streamflow **stress-ng**
+MatlabRuntime Nextflow R Sanger-in-a-box Spark Streamflow __stress-ng__
 
 Select Add-On(s) [Apptainer - stress-ng]: **stress-ng**
 
