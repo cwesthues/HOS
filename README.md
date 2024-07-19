@@ -25,7 +25,7 @@ add 'add-ons' and example applications on top of an existing IBM HPC Tile.
 Here is a list of actually supported add-ons/example apps:
 | Application     | Version |
 | :---            | :----:  |
-| Apptainer       | 1.2.3   |
+| Apptainer       | 1.3.3   |
 | Aspera          | aaaaa   |
 | BLAST           | aaaaa   |
 | DataManager     | aaaaa   |
