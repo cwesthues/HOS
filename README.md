@@ -26,7 +26,7 @@ Actually supported add-ons/example apps:
 STEP 1 : Install IBM Cloud HPC Tile
 
 Example values.json:
-
+...
 {
 "ibmcloud_api_key"                                 : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 "resource_group"                                   : "XXXXXXX",
@@ -37,7 +37,7 @@ Example values.json:
 "remote_allowed_ips"                               : "[\"11.22.33.44\"]",
 "zones"                                            : "[\"eu-de-3\"]"
 }
-
+...
 
 
 
