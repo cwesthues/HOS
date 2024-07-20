@@ -31,11 +31,14 @@ Here are the steps to instantiate a HPC Tile:
 ```
    4.2 Via GUI
    ![Via CLIs!](/img/hpctile06.jpg)
+   
    Configure workspace
    ![Via CLIs!](/img/hpctile07.jpg)
-   dsfsdf
    
-6. dsfdsfsdfs
+   dsfsdf
+
+sdsdfsdfsdf
+
    
 
 
