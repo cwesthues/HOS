@@ -6,6 +6,11 @@ are a good starting point.
 
 Here are the steps to instantiate a HPC Tile:
 
+
+1 Make sure you have a proper IBM Cloud account
+
+2 Get your IBMCLOUD_ACCOUNT_ID ![Get IBMCLOUD_ACCOUNT_ID!](/img/hpctile09.jpg)
+
 1 Create a new ssh key, more details [here](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys)
 ![Create key!](/img/hpctile01.jpg)
 2 In the Cloud Catalog, search for 'HPC' and select 'IBM Cloud HPC'
