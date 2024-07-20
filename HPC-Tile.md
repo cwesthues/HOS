@@ -13,7 +13,6 @@ Here are the steps to instantiate a HPC Tile:
 3. Select 'Review deployment options'
 ![Deployment options!](/img/hpctile03.jpg)
 4. Instantiate the HPC Tile
-   
    4.1 Via CLI
    ![Via CLIs!](/img/hpctile04.jpg)
    
@@ -37,13 +36,7 @@ Here are the steps to instantiate a HPC Tile:
    Configure workspace1
    ![Configure workspace!](/img/hpctile07.jpg)
    bbbbbb
-    Configure workspace2
+   Configure (mandatory) parameters
    ![Configure workspace!](/img/hpctile08.jpg)
    dsfsdf
 
-sdsdfsdfsdf
-
-   
-
-
-ddfsdfsdf
