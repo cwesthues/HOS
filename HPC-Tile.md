@@ -4,6 +4,8 @@
 The [Docs](https://cloud.ibm.com/docs/allowlist/hpc-service?topic=hpc-service-overview)
 are a good starting point.
 
+Here are the steps to instantiate a HPC Tile:
+
 1. Create a new ssh key
 1. sdfsdfsdf
 
