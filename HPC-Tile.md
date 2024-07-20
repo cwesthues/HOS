@@ -37,7 +37,8 @@ Here are the steps to instantiate a HPC Tile:
    Configure workspace1
    ![Configure workspace!](/img/hpctile07.jpg)
    bbbbbb
-   
+    Configure workspace2
+   ![Configure workspace!](/img/hpctile08.jpg)
    dsfsdf
 
 sdsdfsdfsdf
