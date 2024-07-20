@@ -14,9 +14,9 @@ Here are the steps to instantiate a HPC Tile:
 ![Deployment options!](/img/hpctile03.jpg)
 4. Instantiate the HPC Tile
    - 4.1 Via CLI
-   ![Via CLIs!](/img/hpctile04.jpg)
+   - ![Via CLIs!](/img/hpctile04.jpg)
    
-      Example values.json:
+   - Example values.json:
 ```
 {
 "ibmcloud_api_key"                                 : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
