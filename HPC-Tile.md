@@ -16,8 +16,8 @@ Here are the steps to instantiate a HPC Tile:
    
    4.1 Via CLI
    ![Via CLIs!](/img/hpctile04.jpg)
-   Example values.json:
-```
+      Example values.json:
+      ```
 {
 "ibmcloud_api_key"                                 : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 "resource_group"                                   : "XXXXXXX",
@@ -28,10 +28,9 @@ Here are the steps to instantiate a HPC Tile:
 "remote_allowed_ips"                               : "[\"11.22.33.44\"]",
 "zones"                                            : "[\"eu-de-3\"]"
 }
-```
-
-   
-   4.2 Via CLI   aaaaa
+      ```
+   4.2 Via GUI
+    ![Via CLIs!](/img/hpctile04.jpg)
    dsfsdf
    
 6. dsfdsfsdfs
