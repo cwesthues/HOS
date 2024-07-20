@@ -25,6 +25,8 @@ Actually supported add-ons/example apps:
 
 STEP 1 : Install IBM Cloud HPC Tile
 
+For a more detailed HowTo, look here [link](https://www.example.com/my%20great%20page)
+
 Example values.json:
 ```
 {
