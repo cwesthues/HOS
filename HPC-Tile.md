@@ -32,8 +32,8 @@ Here are the steps to instantiate a HPC Tile:
 - 4.2 Via GUI
 
 Title here 1 ![Via CLIs!](/img/hpctile06.jpg)
-Configure workspace ![Via CLIs!](/img/hpctile07.jpg)
-Configure (mandatory) parameters ![Via CLIs!](/img/hpctile08.jpg)
+Configure workspace ![Cnfigure workspace!](/img/hpctile07.jpg)
+Configure (mandatory) parameters ![Configure (mandatory) parameters!](/img/hpctile08.jpg)
 Configure workspaceConfigure workspace
 Configure workspace
 gggggg ![Configure workspace!](/img/hpctile07.jpg)
