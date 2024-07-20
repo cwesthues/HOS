@@ -16,7 +16,7 @@ Here are the steps to instantiate a HPC Tile:
    - 4.1 Via CLI
    ![Via CLIs!](/img/hpctile04.jpg)
    
-   -- Example values.json:
+   - Example values.json:
 ```
 {
 "ibmcloud_api_key"                                 : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
@@ -29,7 +29,7 @@ Here are the steps to instantiate a HPC Tile:
 "zones"                                            : "[\"eu-de-3\"]"
 }
 ```
-   4.2 Via GUI
+   - 4.2 Via GUI
    ![Via CLIs!](/img/hpctile06.jpg)
    blabla
    
