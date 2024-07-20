@@ -13,10 +13,10 @@ Here are the steps to instantiate a HPC Tile:
 3 Select 'Review deployment options'
 ![Deployment options!](/img/hpctile03.jpg)
 4 Instantiate the HPC Tile
-   - 4.1 Via CLI
-   ![Via CLIs!](/img/hpctile04.jpg)
-   
-   Example values.json:
+- 4.1 Via CLI
+- ![Via CLIs!](/img/hpctile04.jpg)
+
+- Example values.json:
 ```
 {
 "ibmcloud_api_key"                                 : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
@@ -29,11 +29,12 @@ Here are the steps to instantiate a HPC Tile:
 "zones"                                            : "[\"eu-de-3\"]"
 }
 ```
-   - 4.2 Via GUI
+- 4.2 Via GUI
    ![Via CLIs!](/img/hpctile06.jpg)
+
    Configure workspace
    ![Configure workspace!](/img/hpctile07.jpg)
    Configure (mandatory) parameters
-   ![Configure workspace!](/img/hpctile08.jpg)
+   ![Configure parameters!](/img/hpctile08.jpg)
 
 
