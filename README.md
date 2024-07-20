@@ -37,7 +37,7 @@ cd HOS
 
 
 
-Example (*stress-ng*):
+Example (**stress-ng**):
 ```
 [root@hpcaas0056-mgmt-1-fef0-001 HOS]# ./HOS.sh
 Enter shared path (<Enter> for '/shared'):
@@ -45,18 +45,18 @@ Enter shared path (<Enter> for '/shared'):
 Select Add-On's
 ===============
 Apptainer Aspera BLAST DataManager Intel-HPCKit iRODS-shell LS-DYNA
-MatlabRuntime Nextflow R Sanger-in-a-box Spark Streamflow stress-ng
+MatlabRuntime Nextflow R Sanger-in-a-box Spark Streamflow **stress-ng**
 
-Select Add-On(s) [Apptainer - stress-ng]: stress-ng
+Select Add-On(s) [Apptainer - stress-ng]: **stress-ng**
 
-You selected stress-ng
+You selected **stress-ng**
 Executing /tmp/stressng_compute.sh on hpcaas0056-mgmt-1-fef0-001
 
 Argument 1 SHARED: /shared
 
-Installing stress-ng
+Installing **stress-ng**
 Moving to /shared
-[root@hpcaas0056-mgmt-1-fef0-001 HOS]# /root/HowTo_stress-ng.sh
+[root@hpcaas0056-mgmt-1-fef0-001 HOS]# /root/HowTo_**stress-ng**.sh
 Submitting stress-ng job:
    sudo -i -u lsfadmin bsub -I stress-ng --cpu 8 --io 4 --vm 2 --vm-bytes 128M --fork 4 --timeout 10s
 
