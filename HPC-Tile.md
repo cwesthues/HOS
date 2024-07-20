@@ -12,11 +12,12 @@ Here are the steps to instantiate a HPC Tile:
 ![Cloud Catalog!](/img/hpctile02.jpg)
 3. Select 'Review deployment options'
 ![Deployment options!](/img/hpctile03.jpg)
-   4.1 webgui
+4. Instantiate the HPC Tile
+   4.1 Through webgui
    sdfdsfsdf
    sdfsd
    
-   4.2 aaaaa
+   4.2 Via CLI   aaaaa
    dsfsdf
    
 5. dsfdsfsdfs
