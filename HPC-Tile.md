@@ -11,7 +11,7 @@ Here are the steps to instantiate a HPC Tile:
 1. In the Cloud Catalog, search for 'HPC' and select 'IBM Cloud HPC'
 ![Cloud Catalog!](/img/img01.jpg)
 1. Select 'Review deployment options'
-   Deployment options!](/img/img02.jpg)
+![Deployment options!](/img/img02.jpg)
 
 
 ddfsdfsdf
