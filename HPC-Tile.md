@@ -44,8 +44,8 @@ Configure workspace
 Configure (mandatory) parameters 
 ![Configure parameters!](/img/hpctile08.jpg)
 
-- 8 Check (https://cloud.ibm.com/schematics/workspaces):
- ![Configure parameters!](/img/hpctile10.jpg)
+- 8 Check https://cloud.ibm.com/schematics/workspaces:
+ ![Check workspaces!](/img/hpctile11.jpg)
   
 
 
