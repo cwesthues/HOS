@@ -35,7 +35,7 @@ Here are the steps to instantiate a HPC Tile:
 "zones"                                            : "[\"eu-de-3\"]"
 }
 ```
-  Optional settings in values.json
+  Optional settings in values.json, example:
 ```
 "cluster_prefix"                                   : "hpcaas_1234",
 "observability_atracker_on_cos_enable"             : false,
